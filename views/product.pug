@@ -1,0 +1,24 @@
+doctype html
+html
+   head
+        title="Vista de producto"
+        style 
+            include ../public/styles/style.css
+   body
+        include ./header.pug
+
+        button#changeColor cambia color 
+
+        section.flex_container
+            each product in products
+                article.flex_container.product_list
+                    h3 Producto #{product.id}
+                    p Se renderizan los datos del producto con ID: #{product.id}
+                    p Titulo: #{product.title}
+                    p Precio: #{product.price}
+                    p descripcion: #{product.description}
+                    img(src=product.image, alt=product.title).product_image
+        script 
+            include ../public/scripts/script.js
+            
+        include ./footer.pug

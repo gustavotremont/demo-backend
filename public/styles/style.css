@@ -1,0 +1,16 @@
+.flex_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.product_list {
+    background-color: aqua;
+    margin: 20px;
+}
+
+.product_image {
+    height: 500px;
+    width: 500px;
+}
