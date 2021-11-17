@@ -2,8 +2,7 @@ doctype html
 html
    head
         title="Vista de producto"
-        style 
-            include ../public/styles/style.css
+        link(rel="stylesheet", href="/styles/style.css")
    body
         include ./header.pug
 
@@ -18,7 +17,7 @@ html
                     p Precio: #{product.price}
                     p descripcion: #{product.description}
                     img(src=product.image, alt=product.title).product_image
-        script 
-            include ../public/scripts/script.js
+
+        script(src="/scripts/script.js")
             
         include ./footer.pug

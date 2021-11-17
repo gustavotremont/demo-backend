@@ -2,21 +2,13 @@
 const dataProduct = require('../utils/product')
 
 const getProduct = async (req, res) => {
-    console.log('**********************');
-    console.log(req.params);
-
-    // Consulta
-    // Los datos
-    // del producto correspondiente
-    // ...
-    // ...
-    
+    let data;    
     if (req.params.id) {
         data = await dataProduct.getProductById(req.params.id)
-        res.status(200).render('product', {products:[data]})
+        res.status(200).json(data)
     } else {
         data = await dataProduct.getAllProducts()
-        res.status(200).render('product',{products:data})
+        res.status(200).json({products:data})
     }
 }
 
