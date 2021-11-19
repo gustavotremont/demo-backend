@@ -4,6 +4,9 @@ const productRouter = require('./routes/product');
 const productApiRouter = require('./routes/productApi');
 const errors = require('./middlewares/errors');
 
+require('dotenv').config(); //carga fichero variables de entorno
+require('./utils/dbmongo'); //Lanzar la BBDD Mongo
+
 const app = express();
 const port = 3000;
 
