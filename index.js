@@ -30,6 +30,8 @@ app.use('/api', productApiRouter);
 //Capture All 404 errors
 app.use(errors.error404);
 
-app.listen(port, () => {
+const server = app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
-})
+});
+
+module.exports = server;
